@@ -12,5 +12,9 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
 
         public string Position { get; set; }
 
+        public override string ToString()
+        {
+            return $"{nameof(OrganizationName)}: {OrganizationName}, {nameof(Position)}: {Position}";
+        }
     }
 }

@@ -8,28 +8,36 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
 {
     class Builder
     {
-        protected readonly Configuration configuration = new Configuration();
+        protected List<Action<PersonInfo>> actions = new List<Action<PersonInfo>>();
+        protected PersonInfo person = new PersonInfo();
 
-        public Builder Name(string name)
+        public PersonInfo Build()
         {
-            configuration.Name = name;
+            foreach (var action in actions)
+            {
+                action(person);
+            }
+
+            return person;
+        }
+    }
+
+    class NameBuilder : Builder
+    {
+        public NameBuilder(PersonInfo person)
+        {
+            this.person = person;
+        }
+
+        public NameBuilder Name(string personName)
+        {
+            actions.Add(x => x.Name = personName);
             return this;
         }
+    }
 
-        public Builder Age(int age)
-        {
-            configuration.Age = age;
-            return this;
-        }
+    class AddressBuilder : Builder
+    {
 
-        public ComplexFieldBuilder ComplexTmpField()
-        {
-            return new ComplexFieldBuilder(this);
-        }
-
-        public Configuration Build()
-        {
-            return configuration;
-        }
     }
 }

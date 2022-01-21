@@ -13,5 +13,10 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
         public AddressInfo Address { get; set; }
 
         public OrganizationInfo Organization { get; set; }
+
+        public override string ToString()
+        {
+            return $"{nameof(Name)}: {Name}, {nameof(Address)}: {Address}, {nameof(Organization)}: {Organization}";
+        }
     }
 }

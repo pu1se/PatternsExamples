@@ -10,13 +10,15 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
     {
         public string Name { get; set; }
 
-        public AddressInfo Address { get; set; }
+        public AddressInfo Address { get; set; } = new AddressInfo();
 
-        public OrganizationInfo Organization { get; set; }
+        public OrganizationInfo Organization { get; set; } = new OrganizationInfo();
 
         public override string ToString()
         {
             return $"{nameof(Name)}: {Name}, {nameof(Address)}: {Address}, {nameof(Organization)}: {Organization}";
         }
+
+        public static PersonBuilder New => new PersonBuilder();
     }
 }

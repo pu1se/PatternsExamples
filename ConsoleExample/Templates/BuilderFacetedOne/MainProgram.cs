@@ -10,17 +10,22 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
     {
         public static void Code()
         {
-            var configuration = Configuration
-                .New
-                .Name("SubscriptionEntity")
-                .Age(12)
-                .ComplexTmpField()
-                    .Name("complex field name")
-                    .Count(5)
-                    .End()
+            // there are a lot of options in suggested list
+            // pros are: smaller view, good for very abstract structure like html
+            // cons are: when you use such builder it's not easy to understand what to write,
+            // cause intelly sence suggest too much methods, you can forget to fill up a required field for example.
+            var person = PersonInfo.New
+                .PrivateInfo
+                    .Name("Peter Parker")
+                .Address
+                    .City("New York")
+                    .Address("Brukline")
+                .Organization
+                    .OrganizationName("Daily Bugele")
+                    .PositionAtOrganization("jurnalist")
                 .Build();
 
-            Console.WriteLine(configuration.ToJson());
+            Console.WriteLine(person.ToJson());
         }
     }
 }

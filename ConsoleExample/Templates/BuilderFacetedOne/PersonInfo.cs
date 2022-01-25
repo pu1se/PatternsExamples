@@ -14,9 +14,18 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
 
         public OrganizationInfo Organization { get; set; } = new OrganizationInfo();
 
+        public IEnumerable<string> PropertyCollection
+        {
+            get
+            {
+                yield return $"{nameof(Name)}: {Name}";
+                yield return $"{nameof(Address)} {{{Address}}}";
+                yield return $"{nameof(Organization)}: {{{Organization}}}";
+            }
+        }
         public override string ToString()
         {
-            return $"{nameof(Name)}: {Name}, {nameof(Address)}: {Address}, {nameof(Organization)}: {Organization}";
+            return PropertyCollection.Join(",");
         }
 
         public static PersonBuilder New => new PersonBuilder();

@@ -25,7 +25,7 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
                     .PositionAtOrganization("jurnalist")
                 .Build();
 
-            Console.WriteLine(person.ToJson());
+            Console.WriteLine(person.ToString());
         }
     }
 }

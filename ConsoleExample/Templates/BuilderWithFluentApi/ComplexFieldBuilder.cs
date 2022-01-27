@@ -22,7 +22,7 @@ namespace ConsoleExample.Templates.BuilderWithFluentApi
             return this;
         }
 
-        public ComplexFieldBuilder Count(int count)
+        public ComplexFieldBuilder Salary(int count)
         {
             complexTmpField.Count = count;
             return this;

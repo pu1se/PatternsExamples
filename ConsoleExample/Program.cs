@@ -11,7 +11,7 @@ namespace ConsoleExample
     {
         static void Main(string[] args)
         {
-            Templates.CollectionExtensions.MainProgram.Code();
+            Templates.BuilderFacetedOne.MainProgram.Code();
 
             //Templates.BuilderWithRecurciveGeneric.MainProgram.Code();
 

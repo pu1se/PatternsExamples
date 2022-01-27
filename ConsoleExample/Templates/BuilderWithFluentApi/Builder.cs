@@ -22,7 +22,7 @@ namespace ConsoleExample.Templates.BuilderWithFluentApi
             return this;
         }
 
-        public ComplexFieldBuilder ComplexTmpField()
+        public ComplexFieldBuilder Organization()
         {
             return new ComplexFieldBuilder(this);
         }

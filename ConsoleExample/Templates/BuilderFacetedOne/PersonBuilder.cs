@@ -5,10 +5,10 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
 {
     class PersonBuilder
     {
-        protected List<Action<PersonInfo>> mutations = new List<Action<PersonInfo>>();
-        private PersonInfo person = new PersonInfo();
+        protected List<Action<Person>> mutations = new List<Action<Person>>();
+        private Person person = new Person();
 
-        public PersonInfo Build()
+        public Person Build()
         {
             foreach (var action in mutations)
             {
@@ -25,7 +25,7 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
 
     class NameBuilder : PersonBuilder
     {
-        public NameBuilder(List<Action<PersonInfo>> mutations)
+        public NameBuilder(List<Action<Person>> mutations)
         {
             this.mutations = mutations;
         }
@@ -39,7 +39,7 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
 
     class AddressBuilder : PersonBuilder
     {
-        public AddressBuilder(List<Action<PersonInfo>> mutations)
+        public AddressBuilder(List<Action<Person>> mutations)
         {
             this.mutations = mutations;
         }
@@ -50,16 +50,16 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
             return this;
         }
 
-        public AddressBuilder Address(string addressName)
+        public AddressBuilder Street(string addressName)
         {
-            mutations.Add(x => x.Address.Address = addressName);
+            mutations.Add(x => x.Address.Street = addressName);
             return this;
         }
     }
 
     class OrganizationBuilder : PersonBuilder
     {
-        public OrganizationBuilder(List<Action<PersonInfo>> mutations)
+        public OrganizationBuilder(List<Action<Person>> mutations)
         {
             this.mutations = mutations;
         }

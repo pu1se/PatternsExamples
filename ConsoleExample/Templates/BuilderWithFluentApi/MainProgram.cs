@@ -14,9 +14,9 @@ namespace ConsoleExample.Templates.BuilderWithFluentApi
                 .New
                 .Name("SubscriptionEntity")
                 .Age(12)
-                .ComplexTmpField()
+                .Organization()
                     .Name("complex field name")
-                    .Count(5)
+                    .Salary(5)
                     .End()
                 .Build();
 

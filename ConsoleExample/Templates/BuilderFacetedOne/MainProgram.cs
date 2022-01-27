@@ -14,12 +14,12 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
             // pros are: smaller view, good for very abstract structure like html
             // cons are: when you use such builder it's not easy to understand what to write,
             // cause intelly sence suggest too much methods, you can forget to fill up a required field for example.
-            var person = PersonInfo.New
+            var person = Person.New
                 .PrivateInfo
                     .Name("Peter Parker")
                 .Address
                     .City("New York")
-                    .Address("Brukline")
+                    .Street("Brukline")
                 .Organization
                     .OrganizationName("Daily Bugele")
                     .PositionAtOrganization("jurnalist")

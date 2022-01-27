@@ -41,7 +41,7 @@
     <Compile Include="Templates\BuilderFacetedOne\PersonBuilder.cs" />
     <Compile Include="Templates\BuilderFacetedOne\MainProgram.cs" />
     <Compile Include="Templates\BuilderFacetedOne\OrganizationInfo.cs" />
-    <Compile Include="Templates\BuilderFacetedOne\PersonInfo.cs" />
+    <Compile Include="Templates\BuilderFacetedOne\Person.cs" />
     <Compile Include="Templates\BuilderWithFluentApi\Builder.cs" />
     <Compile Include="Templates\BuilderWithFluentApi\ComplexFieldBuilder.cs" />
     <Compile Include="Templates\BuilderWithFluentApi\Configuration.cs" />

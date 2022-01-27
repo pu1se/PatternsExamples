@@ -20,7 +20,7 @@ namespace ConsoleExample.Templates.CollectionExtensions
         public static void Example2()
         {
             var role = "Customer";
-            var result = role.IsOneOf("Customer", "Seller", "Admin");
+            var result = role.IsOneOf("Customer", "Seller");
         }
 
         public static void Code()

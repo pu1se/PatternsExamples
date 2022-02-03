@@ -11,7 +11,7 @@ namespace ConsoleExample
     {
         static void Main(string[] args)
         {
-            Templates.BuilderFacetedOne.MainProgram.Code();
+            Templates.ObserverClassicEventBindingList.MainProgram.Code();
 
             //Templates.BuilderWithRecurciveGeneric.MainProgram.Code();
 

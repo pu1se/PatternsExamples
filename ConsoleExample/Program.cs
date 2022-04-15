@@ -4,6 +4,7 @@ using System.Linq;
 using ConsoleExample.Templates.Builder;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using static System.Console;
 
 namespace ConsoleExample
 {
@@ -11,6 +12,12 @@ namespace ConsoleExample
     {
         static void Main(string[] args)
         {
+            var dateSt = "01-01-22";
+            if (DateTime.TryParse(dateSt, out DateTime date))
+            {
+                WriteLine(date.ToLongDateString());
+            }
+
             Templates.BuilderFacetedOne.MainProgram.Code();
 
             //Templates.BuilderWithRecurciveGeneric.MainProgram.Code();

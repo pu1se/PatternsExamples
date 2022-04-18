@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace ConsoleExample.Templates.BuilderFacetedOne
 {
@@ -30,8 +31,9 @@ namespace ConsoleExample.Templates.BuilderFacetedOne
             this.mutations = mutations;
         }
 
-        public NameBuilder Name(string personName)
+        public NameBuilder Name(string personName, [CallerMemberName] string memberName = null, [CallerLineNumber] int lineNumber = -1, [CallerFilePath] string filePath = null)
         {
+            Console.WriteLine($"member name: {memberName}, line number: {lineNumber}, file path: {filePath}");
             mutations.Add(x => x.Name = personName);
             return this;
         }

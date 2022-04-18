@@ -4,6 +4,7 @@ using System.Linq;
 using ConsoleExample.Templates.Builder;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using static System.Console;
 
 namespace ConsoleExample
 {

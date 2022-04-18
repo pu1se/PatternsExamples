@@ -58,6 +58,7 @@
     <Compile Include="Templates\ObserverClassicEventBindingList\MainProgram.cs" />
     <Compile Include="Templates\ObserverClassicEventChangeNotification\MainProgram.cs" />
     <Compile Include="Templates\ObserverClassicEventPropertyChanged\MainProgram.cs" />
+    <Compile Include="Templates\ObserverReactiveExtension\MainProgram.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -12,6 +12,10 @@ namespace ConsoleExample.LanguageFeatures
     {
         public static void Code([CallerMemberName] string callerMethod = "", [CallerFilePath] string callerFilePath = "", [CallerLineNumber] int callingLine = 0)
         {
+            int a=5, b=15;
+            (a, b) = (b, a);
+            WriteLine(b + " " + a);
+
             // c# 5, get information about caller.
             // c# 5 interpolation.
             WriteLine($"caller method: {callerMethod}, caller file path: {callerFilePath}, calling line: {callingLine}");
@@ -37,6 +41,9 @@ namespace ConsoleExample.LanguageFeatures
             }
 
             WriteLine();
+
+            var (height, width) = new Shape { Height = 5, Width = 10 };
+            WriteLine($"height: {height}, width: {width}");
         }
 
         static bool IsItPossibleToCombine(int a, int b, out int result)
@@ -53,6 +60,12 @@ namespace ConsoleExample.LanguageFeatures
         private class Shape
         {
             public int Width, Height;
+
+            public void Deconstruct(out int height, out int width)
+            {
+                height = Height;
+                width = Width;
+            }
         }
     }
 }

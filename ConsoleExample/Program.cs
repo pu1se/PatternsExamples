@@ -13,7 +13,7 @@ namespace ConsoleExample
         static void Main(string[] args)
         {
             LanguageFeatures.MainProgram.Code();
-            Templates.ObserverClassicEventBindingList.MainProgram.Code();
+            //Templates.ObserverClassicEventBindingList.MainProgram.Code();
 
             //Templates.BuilderWithRecurciveGeneric.MainProgram.Code();
 

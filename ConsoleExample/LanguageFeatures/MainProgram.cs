@@ -99,6 +99,44 @@ namespace ConsoleExample.LanguageFeatures
             // always use naming for unclear variable.
             var shape = new Shape(width: 10, height: 12);
             WriteLine();
+
+            var canIDoCombination = new Func<int, int, (bool canIDoCombination, int resultOfCombination)>
+                ((a,b) => (true, a+b));
+            var (canIDoThis, result2) = canIDoCombination(50, 10);
+            if (canIDoThis)
+                WriteLine($"50 + 10 = {result2}");
+
+            WriteLine();
+
+            var worker = (Name: "Pasha", Surname: "Pontus");
+            WriteLine($"This is {worker.Name} {worker.Surname}");
+
+            WriteLine();
+
+
+            // c# 8 pattern matching. Use as validation:
+            var user = new User
+            {
+                Name = "Peter",
+                Age = 16,
+                Salary = 2000
+            };
+            var errorMessage = user switch
+            {
+                null => "Object is missing",
+                { Name: null } => "Name is missing",
+                { Age: 0 } => "Age is missing",
+                { Salary: 0 } => "Salary is missing",
+                { Age: var age } when age < 18 => "User must be older then 18.",
+                { Salary: var salary } when salary < 1000 => "Salary must be bigger then 1000",
+                _ => null
+            };
+            if (errorMessage != null)
+            {
+                WriteLine(errorMessage);
+            }
+
+            WriteLine();WriteLine();WriteLine();
         }
 
         static bool IsItPossibleToCombine(int a, int b, out int result)
@@ -135,5 +173,12 @@ namespace ConsoleExample.LanguageFeatures
 
         private class Animal {}
         private class Pig : Animal {}
+    }
+
+    internal class User
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public int Salary { get; set; }
     }
 }

@@ -10,11 +10,11 @@ namespace ConsoleExample.Templates.CollectionExtensions
     {
         public static void Example1()
         {
-            var customer = new List<Person>();
-            var seller = new List<Person>();
+            var customers = new List<Person>();
+            var sellers = new List<Person>();
 
             var somePerson = new Person { Age = 30, Name = "Peter Parker" };
-            somePerson.AddTo(customer).AddTo(seller);
+            somePerson.AddTo(customers).AddTo(sellers);
         }
 
         public static void Example2()

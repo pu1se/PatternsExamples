@@ -44,7 +44,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates\Behavioral\CompositeCommand\CompositeCommandMainProgram.cs" />
     <Compile Include="Templates\Behavioral\Command\CommandMainProgram.cs" />
+    <Compile Include="Templates\Behavioral\MementoWithPreviousState\MementoWithPreviousStateMainProgram.cs" />
+    <Compile Include="Templates\Behavioral\MementoWithUndoAndRedo\MementoWithUndoAndRedoMainProgram.cs" />
+    <Compile Include="Templates\Behavioral\MementoWithSeveralUndo\MementoWithSeveralUndoMainProgram.cs" />
     <Compile Include="Templates\BuilderFacetedOne\AddressInfo.cs" />
     <Compile Include="Templates\BuilderFacetedOne\PersonBuilder.cs" />
     <Compile Include="Templates\BuilderFacetedOne\MainProgram.cs" />

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace ConsoleExample.Templates.Behavioral.Command
+namespace ConsoleExample.Templates.Behavioral.ChainOfCommands
 {
     public class BankAccount
     {
@@ -93,25 +94,63 @@ namespace ConsoleExample.Templates.Behavioral.Command
         }
     }
 
-    internal static class CommandMainProgram
+    public class CompositeBankAccountCommand : List<BankAccountCommand>, ICommand
+    {
+        public virtual void Call()
+        {
+            this.ForEach(x => x.Call());
+        }
+
+        public virtual void Undo()
+        {
+            Enumerable.Reverse(this).ToList().ForEach(x => x.Undo());
+        }
+
+        public bool FinishedSuccessfully => this.All(x => x.FinishedSuccessfully);
+    }
+
+    public class MoneyTransferCommand : CompositeBankAccountCommand
+    {
+        public MoneyTransferCommand(BankAccount from, BankAccount to, int amount)
+        {
+            Add(new BankAccountCommand(from, ActionType.Withdraw, amount));
+            Add(new BankAccountCommand(to, ActionType.Deposit, amount));
+        }
+
+        public override void Call()
+        {
+            BankAccountCommand lastCommand = null;
+            foreach (var command in this)
+            {
+                if (lastCommand == null || lastCommand.FinishedSuccessfully)
+                {
+                    command.Call();
+                    lastCommand = command;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+        }
+    }
+
+    internal static class CompositeCommandMainProgram // I prefer name ChainOfCommands
     {
         public static void RunCode()
         {
-            var bankAccount = new BankAccount();
-            List<BankAccountCommand> commands = [
-                new BankAccountCommand(bankAccount, ActionType.Deposit, 100),
-                new BankAccountCommand(bankAccount, ActionType.Withdraw, 50)
-            ];
+            var from = new BankAccount();
+            from.Deposit(100);
+            var to = new BankAccount();
 
-            WriteLine(bankAccount);
+            var transferMoney = new MoneyTransferCommand(from, to, 1000);
+            transferMoney.Call();
+            WriteLine(from);
+            WriteLine(to);
 
-            commands.ForEach(x => x.Call());
-
-            WriteLine(bankAccount);
-
-            Enumerable.Reverse(commands).ToList().ForEach(x => x.Undo());
-
-            WriteLine(bankAccount);
+            transferMoney.Undo();
+            WriteLine(from);
+            WriteLine(to);
         }
     }
 }

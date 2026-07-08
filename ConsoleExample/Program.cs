@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Threading;
+﻿using ConsoleExample.Templates.Behavioral.MementoWithUndoAndRedo;
+using System;
 using System.Threading.Tasks;
-using ConsoleExample.Algorithms;
-using ConsoleExample.Templates.Behavioral.Command;
-using ConsoleExample.Templates.Builder;
-using HtmlAgilityPack;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using static System.Console;
 
 
 namespace ConsoleExample
@@ -56,7 +46,7 @@ namespace ConsoleExample
 
         static void Main(string[] args)
         {
-            CommandMainProgram.RunCode();
+            MementoWithUndoAndRedoMainProgram.RunCode();
         }
 
         private static void Calc()

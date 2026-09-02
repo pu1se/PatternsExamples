@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ConsoleExample.Annotations;
-
-namespace ConsoleExample.Templates.ObserverClassicEventChangeNotification
+﻿namespace ConsoleExample.Templates.ObserverClassicEventChangeNotification
 {
     public class Market
     {

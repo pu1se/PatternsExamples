@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleExample.Templates.ObserverReactiveExtension
+﻿namespace ConsoleExample.Templates.ObserverReactiveExtension
 {
     internal static class MainProgram
     {

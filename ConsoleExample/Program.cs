@@ -1,13 +1,3 @@
-﻿namespace ConsoleExample;
+using ConsoleExample.Templates.Behavioral.MementoWithUndoAndRedo;
 
-class Program
-{
-
-    static void Main(string[] args)
-    {
-        MementoWithUndoAndRedoMainProgram.RunCode();
-    }
-}
-
-
-
+MementoWithUndoAndRedoMainProgram.RunCode();

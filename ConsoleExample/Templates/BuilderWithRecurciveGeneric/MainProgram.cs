@@ -1,5 +1,4 @@
-﻿using System;
-using ConsoleExample.Templates.Builder;
+﻿using ConsoleExample.Templates.Builder;
 
 namespace ConsoleExample.Templates.BuilderWithRecurciveGeneric
 {

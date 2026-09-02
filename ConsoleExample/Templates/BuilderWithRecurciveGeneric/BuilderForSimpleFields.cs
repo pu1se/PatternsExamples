@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleExample.Templates.Builder
+﻿namespace ConsoleExample.Templates.Builder
 {
     class BuilderForSimpleFields<TSelf> where TSelf : BuilderForSimpleFields<TSelf>
     {

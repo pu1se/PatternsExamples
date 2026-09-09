@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using PatternsExamples.Annotations;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.ObserverClassicEvent
 {
@@ -30,9 +31,9 @@ namespace PatternsExamples.Templates.ObserverClassicEvent
         }
     }
 
-    internal static class MainProgram
+    internal class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             var market = new Market();
             market.PropertyChanged += (sender, args) =>

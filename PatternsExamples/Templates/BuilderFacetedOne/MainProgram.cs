@@ -1,8 +1,10 @@
-﻿namespace PatternsExamples.Templates.BuilderFacetedOne
+﻿using PatternsExamples._Core;
+
+namespace PatternsExamples.Templates.BuilderFacetedOne
 {
-    static class MainProgram
+    class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             // there are a lot of options in suggested list
             // pros are: smaller view, good for very abstract structure like html

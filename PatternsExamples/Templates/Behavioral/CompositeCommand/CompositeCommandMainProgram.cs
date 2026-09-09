@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.Behavioral.ChainOfCommands
 {
@@ -129,9 +130,9 @@ namespace PatternsExamples.Templates.Behavioral.ChainOfCommands
         }
     }
 
-    internal static class CompositeCommandMainProgram // I prefer name ChainOfCommands
+    internal class CompositeCommandMainProgram : IMainProgram // I prefer name ChainOfCommands
     {
-        public static void RunCode()
+        public void RunCode()
         {
             var from = new BankAccount();
             from.Deposit(100);

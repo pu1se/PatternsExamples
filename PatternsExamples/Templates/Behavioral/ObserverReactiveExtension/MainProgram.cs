@@ -1,8 +1,10 @@
-﻿namespace PatternsExamples.Templates.ObserverReactiveExtension
+﻿using PatternsExamples._Core;
+
+namespace PatternsExamples.Templates.ObserverReactiveExtension
 {
-    internal static class MainProgram
+    internal class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             // var market = new Market();
             // var marketObserver = new ObserveMarker();

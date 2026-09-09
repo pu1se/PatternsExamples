@@ -1,10 +1,11 @@
 ﻿using PatternsExamples.Templates.Builder;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.BuilderWithRecurciveGeneric
 {
-    static class MainProgram
+    class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             var configuration = Configuration
                 .New

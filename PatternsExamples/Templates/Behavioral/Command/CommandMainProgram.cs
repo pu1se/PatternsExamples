@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.Behavioral.Command
 {
@@ -88,9 +89,9 @@ namespace PatternsExamples.Templates.Behavioral.Command
         }
     }
 
-    internal static class CommandMainProgram
+    internal class CommandMainProgram : IMainProgram
     {
-        public static void RunCode()
+        public void RunCode()
         {
             var bankAccount = new BankAccount();
             List<BankAccountCommand> commands = [

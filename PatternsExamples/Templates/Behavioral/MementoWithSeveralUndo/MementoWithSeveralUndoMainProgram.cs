@@ -1,8 +1,9 @@
 ﻿using static System.Console;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.Behavioral.Memento;
 
-public class MementoWithSeveralUndoMainProgram
+public class MementoWithSeveralUndoMainProgram : IMainProgram
 {
     public class Memento
     {
@@ -73,7 +74,7 @@ public class MementoWithSeveralUndoMainProgram
         }
     }
 
-    public static void RunCode()
+    public void RunCode()
     {
         var bankAccount = new BankAccount();
         bankAccount.Deposit(100);

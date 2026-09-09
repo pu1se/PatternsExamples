@@ -1,4 +1,6 @@
-﻿namespace PatternsExamples.Templates.ObserverClassicEventChangeNotification
+﻿using PatternsExamples._Core;
+
+namespace PatternsExamples.Templates.ObserverClassicEventChangeNotification
 {
     public class Market
     {
@@ -13,9 +15,9 @@
         }
     }
 
-    internal static class MainProgram
+    internal class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             var market = new Market();
             market.PriceListWasChanged += (sender, e) =>

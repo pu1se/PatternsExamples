@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.ObserverClassicEventBindingList
 {
@@ -12,9 +13,9 @@ namespace PatternsExamples.Templates.ObserverClassicEventBindingList
         }
     }
 
-    internal static class MainProgram
+    internal class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             var market = new Market();
             market.PriceList.ListChanged += (sender, e) =>

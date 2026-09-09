@@ -1,6 +1,8 @@
-﻿namespace PatternsExamples.PrarallelExecution
+﻿using PatternsExamples._Core;
+
+namespace PatternsExamples.PrarallelExecution
 {
-    public static class MainProgram
+    public class MainProgram : IMainProgram
     {
         public static void Write(object st)
         {
@@ -18,7 +20,7 @@
 
         
 
-        public static void RunCode()
+        public void RunCode()
         {
             
             var arr = new string[] { "1" };

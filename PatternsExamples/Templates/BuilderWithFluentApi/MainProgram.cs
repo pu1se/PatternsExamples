@@ -1,8 +1,10 @@
-﻿namespace PatternsExamples.Templates.BuilderWithFluentApi
+﻿using PatternsExamples._Core;
+
+namespace PatternsExamples.Templates.BuilderWithFluentApi
 {
-    static class MainProgram
+    class MainProgram : IMainProgram
     {
-        public static void Code()
+        public void RunCode()
         {
             var configuration = Configuration
                 .New

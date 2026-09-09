@@ -1,3 +1,4 @@
 using PatternsExamples.Templates.Behavioral.MementoWithUndoAndRedo;
 
-MementoWithUndoAndRedoMainProgram.RunCode();
+var mainProgram = new MementoWithUndoAndRedoMainProgram();
+mainProgram.RunCode();

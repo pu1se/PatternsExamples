@@ -1,8 +1,9 @@
 ﻿using static System.Console;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.Behavioral.EventSourcing;
 
-class EventSourcingMainProgram
+class EventSourcingMainProgram : IMainProgram
 {
     public class BookMemento
     {
@@ -47,7 +48,7 @@ class EventSourcingMainProgram
         }
     }
 
-    public static void RunCode()
+    public void RunCode()
     {
         var book = new Book
         {

@@ -1,15 +1,17 @@
-﻿namespace PatternsExamples.Algorithms.QuickSort;
+﻿using PatternsExamples._Core;
 
-public class QuickSort1MainProgram
+namespace PatternsExamples.Algorithms.QuickSort;
+
+public class QuickSort1MainProgram : IMainProgram
 {
-    public void Run()
+    public void RunCode()
     {
 
     }
 
     public int[] SortArray(int[] arr)
     {
-
+        throw new NotImplementedException();
     }
 }
 

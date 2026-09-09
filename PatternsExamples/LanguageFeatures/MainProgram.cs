@@ -1,10 +1,16 @@
 ﻿using System.Runtime.CompilerServices;
 using static System.Console;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.LanguageFeatures
 {
-    internal class MainProgram
+    internal class MainProgram : IMainProgram
     {
+        public void RunCode()
+        {
+            Code();
+        }
+
         public static void Code([CallerMemberName] string callerMethod = "", [CallerFilePath] string callerFilePath = "", [CallerLineNumber] int callingLine = 0)
         {
             int a=5, b=15;

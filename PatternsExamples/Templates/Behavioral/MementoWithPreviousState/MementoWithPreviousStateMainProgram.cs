@@ -1,8 +1,9 @@
 ﻿using static System.Console;
+using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.Behavioral.MementoWithPreviousState;
 
-public class MementoWithPreviousStateMainProgram
+public class MementoWithPreviousStateMainProgram : IMainProgram
 {
     public class BookMemento
     {
@@ -47,7 +48,7 @@ public class MementoWithPreviousStateMainProgram
         }
     }
 
-    public static void RunCode()
+    public void RunCode()
     {
         var book = new Book
         {

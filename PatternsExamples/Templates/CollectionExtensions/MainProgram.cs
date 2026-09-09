@@ -1,6 +1,8 @@
-﻿namespace PatternsExamples.Templates.CollectionExtensions
+﻿using PatternsExamples._Core;
+
+namespace PatternsExamples.Templates.CollectionExtensions
 {
-    internal static class MainProgram
+    internal class MainProgram : IMainProgram
     {
         public static void Example1()
         {
@@ -17,7 +19,7 @@
             var result = role.IsOneOf("Customer", "Seller");
         }
 
-        public static void Code()
+        public void RunCode()
         {
             Example1();
             Example2();

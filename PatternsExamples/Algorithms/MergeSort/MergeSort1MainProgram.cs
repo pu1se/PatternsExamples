@@ -2,6 +2,9 @@
 
 namespace PatternsExamples.Algorithms.MergeSort;
 
+// code quality 7 — читаемо, но рекурсия и Concat/ToArray на каждом слиянии
+// time  O(n log n)
+// mem O(n log n)
 internal class MergeSort1MainProgram : IMainProgram
 {
     public void RunCode()

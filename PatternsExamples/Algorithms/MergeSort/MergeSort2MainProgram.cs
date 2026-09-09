@@ -2,6 +2,9 @@
 
 namespace PatternsExamples.Algorithms.MergeSort;
 
+// code quality 8 — итеративно, слои не удерживаются в памяти
+// time  O(n log n)
+// mem O(n)
 internal class MergeSort2MainProgram : IMainProgram
 {
     public void RunCode()

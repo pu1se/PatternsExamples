@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.MergeSort;
 
-// code quality 7 — читаемо, но рекурсия и Concat/ToArray на каждом слиянии
+//main idea: дробим массив на атомарные, потом попарно сливаем отсортированные снизу вверх, пока не останется один
+// code quality 7
+//hint: рекурсия удерживает все слои сразу, а Concat/ToArray копирует на каждом слиянии — отсюда O(n log n) памяти вместо O(n)
 // time  O(n log n)
 // mem O(n log n)
 internal class MergeSort1MainProgram : IMainProgram

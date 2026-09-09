@@ -3,7 +3,9 @@
 namespace PatternsExamples.Algorithms.RangeSum;
 
 // чтобы получить range sum нужно от суммы отнять сумму невходящую в range
-// code quality 2 — падает: prefixSums объявлен пустым и не выделяется
+//main idea: префиксные суммы, сумма на отрезке = prefix[right] - prefix[left-1]
+// code quality 2
+//hint: падает — prefixSums объявлен пустым массивом и никогда не выделяется под nums.Length
 // time  O(n) построение, O(1) запрос
 // mem O(n)
 internal class RangeSum1dMainProgram : IMainProgram

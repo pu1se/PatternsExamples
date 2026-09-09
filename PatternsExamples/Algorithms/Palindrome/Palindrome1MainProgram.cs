@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.Palindrome;
 
-// code quality 5 — HashSet пересоздаётся на каждый вызов, ToString().ToLower() на каждый символ
+//main idea: два указателя с краёв навстречу, пропускаем всё кроме букв и цифр, сравниваем без учёта регистра
+// code quality 5
+//hint: HashSet из 62 символов пересоздаётся на каждый вызов, а ToString().ToLower() аллоцирует 2 строки на символ — хватило бы char.IsLetterOrDigit и char.ToLowerInvariant
 // time  O(n)
 // mem O(1)
 internal class Palindrome1MainProgram : IMainProgram

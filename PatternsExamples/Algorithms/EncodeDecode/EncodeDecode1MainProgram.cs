@@ -3,7 +3,9 @@ using PatternsExamples._Core;
 
 namespace PatternsExamples.Algorithms.EncodeDecode;
 
-// code quality 5 — работает на любых строках, но кодирует посимвольно и раздувает результат
+//main idea: каждый символ пишем как число со сдвигом +10 через пробел, конец строки помечаем -1
+// code quality 5
+//hint: работает на любых входных строках, но результат раздувается в разы — на каждый символ число плюс пробел
 // time  O(n)
 // mem O(n)
 internal class EncodeDecode1MainProgram : IMainProgram

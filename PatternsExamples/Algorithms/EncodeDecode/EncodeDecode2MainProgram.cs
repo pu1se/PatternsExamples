@@ -3,7 +3,9 @@ using PatternsExamples._Core;
 
 namespace PatternsExamples.Algorithms.EncodeDecode;
 
-// code quality 4 — компактно, но ломается, если строка содержит разделитель
+//main idea: склеиваем строки через редкий разделитель, при декоде режем по нему
+// code quality 4
+//hint: ломается, если сама строка содержит разделитель — надёжнее префикс длины перед каждой строкой
 // time  O(n)
 // mem O(n)
 internal class EncodeDecode2MainProgram : IMainProgram

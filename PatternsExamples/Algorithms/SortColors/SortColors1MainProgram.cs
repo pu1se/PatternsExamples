@@ -22,7 +22,9 @@ L|       R
      L|R
 001122
  */
-// code quality 0 — не реализовано, только разбор
+//main idea: dutch national flag — три указателя, 0 кидаем влево, 2 вправо, 1 сами остаются в середине
+// code quality 0
+//hint: не реализовано, есть только разбор
 // time  O(n) — цель
 // mem O(1) — цель
 internal class SortColors1MainProgram : IMainProgram

@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.Sudoku;
 
-// code quality 7 — читаемо, но 3 интерполированные строки на каждую клетку
+//main idea: один проход по доске, каждую цифру кладём в HashSet тремя ключами — строка, столбец, квадрат
+// code quality 7
+//hint: 3 интерполированные строки на каждую заполненную клетку — лишние аллокации на ровном месте
 // time  O(n^2), n — сторона доски
 // mem O(n^2)
 internal class Sudoku1MainProgram : IMainProgram

@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.MergeSort;
 
-// code quality 8 — итеративно, слои не удерживаются в памяти
+//main idea: очередь атомарных очередей, на каждом шаге сливаем две головные и результат кладём в хвост
+// code quality 8
+//hint: на каждое слияние аллоцируется новая Queue — на массиве с индексами слияние шло бы без копий
 // time  O(n log n)
 // mem O(n)
 internal class MergeSort2MainProgram : IMainProgram

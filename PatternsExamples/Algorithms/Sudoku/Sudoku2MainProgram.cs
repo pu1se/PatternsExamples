@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.Sudoku;
 
-// code quality 7 — без аллокаций, но ключи на магических числах
+//main idea: то же самое, но ключи считаются арифметикой в непересекающихся диапазонах вместо интерполяции строк
+// code quality 7
+//hint: без аллокаций, но корректность держится на магических числах 100/200/300 и на том, что диапазоны не пересекаются
 // time  O(n^2), n — сторона доски
 // mem O(n^2)
 internal class Sudoku2MainProgram : IMainProgram

@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.MajorityElement;
 
-// code quality 8 — чистый Бойер-Мур, один проход без доп. памяти
+//main idea: голосование Бойера-Мура — держим кандидата и счётчик, при уходе счётчика в минус меняем кандидата
+// code quality 8
+//hint: нет проверки, что мажоритарный элемент реально существует — если его нет, вернётся мусор, закрывается вторым проходом
 // time  O(n)
 // mem O(1)
 internal class MajorityElement1MainProgram : IMainProgram

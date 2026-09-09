@@ -2,7 +2,9 @@
 
 namespace PatternsExamples.Algorithms.QuickSort;
 
-// code quality 3 — не сортирует: в Partition меняются границы вместо индексов
+//main idea: схема Хоара — выбираем опорное значение, разносим меньшие влево и большие вправо, рекурсивно сортируем половины
+// code quality 3
+//hint: не сортирует. В Partition SwapElements(arr, left, right) меняет границы вместо leftIndex/rightIndex, и возвращается pivotIndex вместо точки разбиения
 // time  O(n log n) в среднем, O(n^2) в худшем
 // mem O(log n)
 internal class QuickSort1MainProgram : IMainProgram

@@ -7,7 +7,9 @@ namespace PatternsExamples.Algorithms.RangeSum;
  лишние матрицы сторочную и два столбца, а потом
  компенсировать их пересечение
  */
-// code quality 0 — не реализовано
+//main idea: префиксные суммы по матрице — от суммы до правого нижнего угла вычитаем строку и столбец, потом компенсируем их пересечение
+// code quality 0
+//hint: не реализовано, есть только разбор
 // time  O(n*m) построение, O(1) запрос — цель
 // mem O(n*m) — цель
 internal class RangeSum2dMainProgram : IMainProgram

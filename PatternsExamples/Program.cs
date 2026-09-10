@@ -1,4 +1,4 @@
-using PatternsExamples.Templates.Behavioral.MementoWithUndoAndRedo;
+using PatternsExamples.Algorithms.ThreeSum;
 
-var mainProgram = new MementoWithUndoAndRedoMainProgram();
+var mainProgram = new ThreeSum1MainProgram();
 mainProgram.RunCode();

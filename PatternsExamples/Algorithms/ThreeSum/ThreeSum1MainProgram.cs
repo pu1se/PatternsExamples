@@ -50,7 +50,7 @@ internal class ThreeSum1MainProgram : IMainProgram
 {
     public void RunCode()
     {
-        int[] nums = [-5, -4, -2, -1, 0, 1, 2, 3];
+        int[] nums = [-1, 0, 1, 2, -1, -4];
 
         var solution = new Solution();
         var triplets = solution.ThreeSum(nums);
@@ -61,8 +61,36 @@ internal class ThreeSum1MainProgram : IMainProgram
 
 file class Solution
 {
-    public IList<IList<int>> ThreeSum(int[] nums)
+    public List<List<int>> ThreeSum(int[] nums)
     {
-        throw new NotImplementedException();
+        var orignialNums = nums;
+        nums = nums.OrderBy(x => x).ToArray();
+        var treeplets = new List<List<int>>();
+        var hasSet = new HashSet<string>();
+
+        for (int i = 0; i < nums.Length - 2; i++)
+        {
+            var left = i + 1;
+            var right = nums.Length - 1;
+
+            while (nums[left] + nums[right] + nums[i] != 0 && left < right)
+            {
+                if (0 < nums[left] + nums[right] + nums[i])
+                    right--;
+
+                if (nums[left] + nums[right] + nums[i] < 0)
+                    left++;
+            }
+
+            if (left == right)
+                continue;
+
+            if (hasSet.Add(GetHashSetKey(i, left, right)))
+                treeplets.Add([i, left, right]);
+        }
+
+        return treeplets;
     }
+
+    string GetHashSetKey(int first, int second, int theard) => $"{first}_{second}_{theard}";
 }

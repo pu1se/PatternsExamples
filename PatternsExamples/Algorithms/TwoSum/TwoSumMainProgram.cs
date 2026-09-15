@@ -23,36 +23,30 @@ file class Solution
     {
         var left = 0;
         var right = nums.Length - 1;
-        var orignialNums = nums;
-        var sortedNums = nums.OrderBy(x => x).ToArray();
+        var sortedNums = nums.OrderBy(x => x)
+            .Select((value, index) => (value, index))
+            .ToArray();
 
         while (left < right)
         {
-            var sum = sortedNums[left] + sortedNums[right];
-            if (sum == target)
+            var sum = sortedNums[left].value + sortedNums[right].value;
+            switch (sum)
             {
-                return ReturnOriginalIndexes(orignialNums, sortedNums[left], sortedNums[right]);
-            }
+                case var _ when sum == target:
+                    return sortedNums[left].index < sortedNums[right].index
+                        ? [sortedNums[left].index, sortedNums[right].index]
+                        : [sortedNums[right].index, sortedNums[left].index];
 
-            if (sum < target)
-                left++;
-            else
-                right--;
+                case var _ when sum < target:
+                    left++;
+                    break;
+
+                case var _ when sum > target:
+                    right--;
+                    break;
+            }
         }
 
         return [];
-    }
-
-    private static int[] ReturnOriginalIndexes(int[] orignialNums, int leftValue, int rightValue)
-    {
-        var left = 0;
-        while (orignialNums[left] != leftValue)
-            left++;
-
-        var right = orignialNums.Length - 1;
-        while (orignialNums[right] != rightValue)
-            right--;
-
-        return left < right ? [left, right] : [right, left];
     }
 }

@@ -24,38 +24,40 @@ file class Solution
     {
         nums = nums.OrderBy(x => x).ToArray();
         var treeplets = new List<List<int>>();
-        var hasSet = new HashSet<string>();
+        var hasSet = new HashSet<(int, int, int)>();
 
         for (int i = 0; i < nums.Length - 2; i++)
         {
             var left = i + 1;
             var right = nums.Length - 1;
 
-            while (left != right)
+            while (left < right)
             {
                 var sum = nums[i] + nums[left] + nums[right];
 
-                if (0 < sum)
-                    right--;
-
-                if (sum < 0)
-                    left++;
-
-                if (sum == 0)
+                switch (sum)
                 {
-                    if (hasSet.Add(GetHashSetKey(nums[i], nums[left], nums[right])))
-                    {
-                        treeplets.Add([nums[i], nums[left], nums[right]]);
-                    }
+                    case var _ when 0 < sum:
+                        right--;
+                        break;
 
-                    left++;
-                    right--;
+                    case var _ when sum < 0:
+                        left++;
+                        break;
+
+                    case var _ when sum == 0:
+                        if (hasSet.Add((nums[i], nums[left], nums[right])))
+                        {
+                            treeplets.Add([nums[i], nums[left], nums[right]]);
+                        }
+
+                        left++;
+                        right--;
+                        break;
                 }
             }
         }
 
         return treeplets;
     }
-
-    string GetHashSetKey(int first, int second, int theard) => $"{first}_{second}_{theard}";
 }

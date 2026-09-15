@@ -9,7 +9,7 @@ internal class ThreeSum2MainProgram : IMainProgram
 {
     public void RunCode()
     {
-        int[] nums = [-2, 0, 0, 2, 2];
+        int[] nums = [-2, 1, 1];
 
         var solution = new Solution();
         var triplets = solution.ThreeSum(nums);
@@ -27,7 +27,7 @@ file class Solution
 
         for (var i = 0; i < nums.Length - 2; i++)
         {
-            if (i > 0 && nums[i] == nums[i - 1])
+            if (triplets.Any() && triplets.Last()[0] == nums[i])
                 continue;
 
             var left = i + 1;
@@ -50,10 +50,10 @@ file class Solution
                     left++;
                     right--;
 
-                    while (left < right && nums[left] == nums[left - 1])
+                    while (left < right && triplets.Last()[1] == nums[left])
                         left++;
 
-                    while (left < right && nums[right] == nums[right + 1])
+                    while (left < right && triplets.Last()[2] == nums[right])
                         right--;
                 }
             }

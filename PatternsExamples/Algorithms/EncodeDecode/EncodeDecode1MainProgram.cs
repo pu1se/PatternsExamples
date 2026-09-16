@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using PatternsExamples._Core;
 
 namespace PatternsExamples.Algorithms.EncodeDecode;
 

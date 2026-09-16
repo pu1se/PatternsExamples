@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.Sudoku;
+﻿namespace PatternsExamples.Algorithms.Sudoku;
 
 //main idea: то же самое, но ключи считаются арифметикой в непересекающихся диапазонах вместо интерполяции строк
 // code quality 7

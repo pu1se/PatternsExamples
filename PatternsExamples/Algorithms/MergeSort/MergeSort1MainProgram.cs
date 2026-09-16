@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.MergeSort;
+﻿namespace PatternsExamples.Algorithms.MergeSort;
 
 //main idea: дробим массив на атомарные, потом попарно сливаем отсортированные снизу вверх, пока не останется один
 // code quality 7

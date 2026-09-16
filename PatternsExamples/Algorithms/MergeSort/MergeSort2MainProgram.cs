@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.MergeSort;
+﻿namespace PatternsExamples.Algorithms.MergeSort;
 
 //main idea: очередь атомарных очередей, на каждом шаге сливаем две головные и результат кладём в хвост
 // code quality 8

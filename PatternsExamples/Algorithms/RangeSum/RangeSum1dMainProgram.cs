@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.RangeSum;
+﻿namespace PatternsExamples.Algorithms.RangeSum;
 
 // чтобы получить range sum нужно от суммы отнять сумму невходящую в range
 //main idea: префиксные суммы, сумма на отрезке = prefix[right] - prefix[left-1]

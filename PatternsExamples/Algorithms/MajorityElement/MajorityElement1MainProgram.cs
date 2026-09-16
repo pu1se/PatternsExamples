@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.MajorityElement;
+﻿namespace PatternsExamples.Algorithms.MajorityElement;
 
 //main idea: голосование Бойера-Мура — держим кандидата и счётчик, при уходе счётчика в минус меняем кандидата
 // code quality 8

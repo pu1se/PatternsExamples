@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.Palindrome;
+﻿namespace PatternsExamples.Algorithms.Palindrome;
 
 //main idea: два указателя с краёв навстречу, пропускаем всё кроме букв и цифр, сравниваем без учёта регистра
 // code quality 5
@@ -21,7 +19,7 @@ internal class Palindrome1MainProgram : IMainProgram
 
 file class Solution
 {
-    HashSet<char> _characters = new HashSet<char>();
+    HashSet<char> _characters = new();
 
     public bool IsPalindrome(string s)
     {

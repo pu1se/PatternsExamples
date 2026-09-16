@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.RangeSum;
+﻿namespace PatternsExamples.Algorithms.RangeSum;
 
 /*
  нужно отнять от суммы матрицы от 0 0 до левого карая

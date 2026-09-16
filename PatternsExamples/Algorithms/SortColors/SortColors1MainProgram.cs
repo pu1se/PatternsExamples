@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.SortColors;
+﻿namespace PatternsExamples.Algorithms.SortColors;
 
 /*
 Sort colors за O(n). Разбор задачи (решения ещё нет, только анализ).

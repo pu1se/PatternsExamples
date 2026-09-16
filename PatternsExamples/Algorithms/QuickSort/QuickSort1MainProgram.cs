@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.QuickSort;
+﻿namespace PatternsExamples.Algorithms.QuickSort;
 
 //main idea: схема Хоара — выбираем опорное значение, разносим меньшие влево и большие вправо, рекурсивно сортируем половины
 // code quality 3

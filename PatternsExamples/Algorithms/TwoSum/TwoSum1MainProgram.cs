@@ -1,8 +1,6 @@
-﻿using PatternsExamples._Core;
+﻿namespace PatternsExamples.Algorithms.TwoSum;
 
-namespace PatternsExamples.Algorithms.TwoSum;
-
-internal class TwoSumMainProgram : IMainProgram
+internal class TwoSum1MainProgram : IMainProgram
 {
     public void RunCode()
     {

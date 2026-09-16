@@ -1,5 +1,4 @@
-﻿using PatternsExamples._Core;
-namespace PatternsExamples.Algorithms.ThreeSum;
+﻿namespace PatternsExamples.Algorithms.ThreeSum;
 //main idea: отсортировать, зафиксировать один элемент и свести задачу к two sum двумя указателями
 // code quality 0
 //hint: не реализовано, есть только разбор

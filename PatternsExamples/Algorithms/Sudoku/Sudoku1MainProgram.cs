@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Algorithms.Sudoku;
+﻿namespace PatternsExamples.Algorithms.Sudoku;
 
 //main idea: один проход по доске, каждую цифру кладём в HashSet тремя ключами — строка, столбец, квадрат
 // code quality 7
@@ -49,7 +47,7 @@ file class Solution
                         return false;
                     if (_hashSet.Add($"col_{col}_{val}") == false)
                         return false;
-                    if (_hashSet.Add($"box_{row/3}_{col/3}_{val}") == false)
+                    if (_hashSet.Add($"box_{row / 3}_{col / 3}_{val}") == false)
                         return false;
                 }
             }

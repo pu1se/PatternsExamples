@@ -1,4 +1,4 @@
-namespace PatternsExamples._Core;
+namespace PatternsExamples;
 
 /// <summary>
 /// Common entry point of every example in this project.

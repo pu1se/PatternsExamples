@@ -18,31 +18,33 @@ file class Solution
 {
     public int[] TwoSum(int[] nums, int target)
     {
+        // todo: rename
         var dict = new Dictionary<int, int>();
 
         for (var i = 0; i < nums.Length; i++)
         {
-            var currentValue = nums[i];
-            var searchingElement = target - currentValue;
-            if (!dict.ContainsKey(searchingElement))
-                dict[searchingElement] = i;
+            var partA = nums[i];
+            var searchingPartB = target - partA;
+            if (!dict.ContainsKey(searchingPartB))
+                dict[searchingPartB] = i;
         }
 
         for (var i = 0; i < nums.Length; i++)
         {
-            var searchingElement = nums[i];
+            // todo: rename
+            var partB = nums[i];
 
-            if (dict.ContainsKey(searchingElement))
-            {
-                var j = dict[searchingElement];
+            if (!dict.ContainsKey(partB))
+                continue;
 
-                if (i == j)
-                    continue;
+            var j = dict[partB];
+            if (i == j)
+                continue;
 
-                return j > i
-                    ? [i, j]
-                    : [j, i];
-            }
+            // todo: how can I write this in a short form, for example sorted
+            return j > i
+                ? [i, j]
+                : [j, i];
 
         }
 

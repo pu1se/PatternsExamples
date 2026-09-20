@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Templates.ObserverReactiveExtension
+﻿namespace PatternsExamples.Templates.ObserverReactiveExtension
 {
     internal class MainProgram : IMainProgram
     {

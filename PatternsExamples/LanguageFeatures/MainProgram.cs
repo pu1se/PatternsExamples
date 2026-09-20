@@ -1,6 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
 using static System.Console;
-using PatternsExamples._Core;
 
 namespace PatternsExamples.LanguageFeatures
 {
@@ -13,7 +12,7 @@ namespace PatternsExamples.LanguageFeatures
 
         public static void Code([CallerMemberName] string callerMethod = "", [CallerFilePath] string callerFilePath = "", [CallerLineNumber] int callingLine = 0)
         {
-            int a=5, b=15;
+            int a = 5, b = 15;
             (a, b) = (b, a);
             WriteLine(b + " " + a);
 
@@ -102,7 +101,7 @@ namespace PatternsExamples.LanguageFeatures
             WriteLine();
 
             var canIDoCombination = new Func<int, int, (bool canIDoCombination, int resultOfCombination)>
-                ((a,b) => (true, a+b));
+                ((a, b) => (true, a + b));
             var (canIDoThis, result2) = canIDoCombination(50, 10);
             if (canIDoThis)
                 WriteLine($"50 + 10 = {result2}");
@@ -137,7 +136,7 @@ namespace PatternsExamples.LanguageFeatures
                 WriteLine(errorMessage);
             }
 
-            WriteLine();WriteLine();WriteLine();
+            WriteLine(); WriteLine(); WriteLine();
         }
 
         static bool IsItPossibleToCombine(int a, int b, out int result)
@@ -172,8 +171,8 @@ namespace PatternsExamples.LanguageFeatures
             }
         }
 
-        private class Animal {}
-        private class Pig : Animal {}
+        private class Animal { }
+        private class Pig : Animal { }
     }
 
     internal class User

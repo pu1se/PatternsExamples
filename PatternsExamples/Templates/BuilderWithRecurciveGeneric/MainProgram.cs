@@ -1,5 +1,4 @@
 ﻿using PatternsExamples.Templates.Builder;
-using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.BuilderWithRecurciveGeneric
 {

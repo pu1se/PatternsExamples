@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Templates.BuilderFacetedOne
+﻿namespace PatternsExamples.Templates.BuilderFacetedOne
 {
     class MainProgram : IMainProgram
     {

@@ -5,7 +5,7 @@
 //hint: нет проверки, что мажоритарный элемент реально существует — если его нет, вернётся мусор, закрывается вторым проходом
 // time  O(n)
 // mem O(1)
-internal class MajorityElement1MainProgram : IMainProgram
+internal class MajorityElement2MainProgram : IMainProgram
 {
     public void RunCode()
     {
@@ -27,20 +27,10 @@ file class Solution
 
         foreach (var num in nums)
         {
-            if (num == majorityElement)
-            {
-                vote++;
-            }
-            else
-            {
-                vote--;
-            }
-
-            if (vote == -1)
-            {
+            if (vote == 0)
                 majorityElement = num;
-                vote = 1;
-            }
+
+            vote += num == majorityElement ? +1 : -1;
         }
 
         return majorityElement;

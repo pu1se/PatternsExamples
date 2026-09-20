@@ -1,7 +1,6 @@
-﻿using System.ComponentModel;
+﻿using PatternsExamples.Annotations;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using PatternsExamples.Annotations;
-using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.ObserverClassicEvent
 {

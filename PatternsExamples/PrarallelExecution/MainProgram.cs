@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.PrarallelExecution
+﻿namespace PatternsExamples.PrarallelExecution
 {
     public class MainProgram : IMainProgram
     {
@@ -18,16 +16,16 @@ namespace PatternsExamples.PrarallelExecution
             return st.ToString().Length;
         }
 
-        
+
 
         public void RunCode()
         {
-            
+
             var arr = new string[] { "1" };
 
             var tokenSource = new CancellationTokenSource();
             var token = tokenSource.Token;
-            
+
             var task1 = Task.Factory.StartNew(() =>
             {
                 int i = 10;

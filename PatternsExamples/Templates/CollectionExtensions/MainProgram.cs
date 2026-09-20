@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Templates.CollectionExtensions
+﻿namespace PatternsExamples.Templates.CollectionExtensions
 {
     internal class MainProgram : IMainProgram
     {

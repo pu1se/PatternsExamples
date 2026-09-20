@@ -1,6 +1,4 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Templates.BuilderWithFluentApi
+﻿namespace PatternsExamples.Templates.BuilderWithFluentApi
 {
     class MainProgram : IMainProgram
     {

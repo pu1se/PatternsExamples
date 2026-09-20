@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel;
-using PatternsExamples._Core;
 
 namespace PatternsExamples.Templates.ObserverClassicEventBindingList
 {
     class Market
     {
-        public BindingList<decimal> PriceList = new BindingList<decimal>();
+        public BindingList<decimal> PriceList = new();
 
         public void AddNewPrice(decimal newPrice)
         {

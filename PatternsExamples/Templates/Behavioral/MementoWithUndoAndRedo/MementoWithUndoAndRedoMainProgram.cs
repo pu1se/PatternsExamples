@@ -1,5 +1,4 @@
 ﻿using static System.Console;
-using PatternsExamples._Core;
 namespace PatternsExamples.Templates.Behavioral.MementoWithUndoAndRedo;
 
 public class MementoWithUndoAndRedoMainProgram : IMainProgram

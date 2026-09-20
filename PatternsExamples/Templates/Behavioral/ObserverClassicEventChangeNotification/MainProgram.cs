@@ -1,12 +1,10 @@
-﻿using PatternsExamples._Core;
-
-namespace PatternsExamples.Templates.ObserverClassicEventChangeNotification
+﻿namespace PatternsExamples.Templates.ObserverClassicEventChangeNotification
 {
     public class Market
     {
-        public List<decimal> PriceList = new List<decimal>();
+        public List<decimal> PriceList = new();
 
-        public event EventHandler<decimal> PriceListWasChanged; 
+        public event EventHandler<decimal> PriceListWasChanged;
 
         public void AddNewPrice(decimal newPrice)
         {

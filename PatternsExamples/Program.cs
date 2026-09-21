@@ -1,4 +1,4 @@
-using PatternsExamples.Algorithms.ProductsOfArrayExceptSelf;
+using PatternsExamples.Algorithms.ThreeSum;
 
-var mainProgram = new ProductsOfArrayExceptSelf2MainProgram();
+var mainProgram = new ThreeSum4MainProgram();
 mainProgram.RunCode();

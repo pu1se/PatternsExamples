@@ -20,7 +20,7 @@ file class Solution
 {
     public int[] SortArray(int[] arr)
     {
-        var atomicArrays = MapOnAtoms(arr);
+        var atomicArrays = MapToAtoms(arr);
         return ReduceTree(atomicArrays);
     }
 
@@ -50,7 +50,7 @@ file class Solution
         return new([.. mergedArray, .. arrQueue1, .. arrQueue2]);
     }
 
-    Queue<Queue<int>> MapOnAtoms(int[] arr)
+    Queue<Queue<int>> MapToAtoms(int[] arr)
     {
         Queue<Queue<int>> atomics = new(arr.Length);
 

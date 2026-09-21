@@ -31,9 +31,10 @@ file class Solution
             switch (sum)
             {
                 case var _ when sum == target:
-                    return sortedNums[left].index < sortedNums[right].index
-                        ? [sortedNums[left].index, sortedNums[right].index]
-                        : [sortedNums[right].index, sortedNums[left].index];
+                    var leftPartIndex = sortedNums[left].index;
+                    var rightPartIndex = sortedNums[right].index;
+
+                    return [Math.Min(leftPartIndex, rightPartIndex), Math.Max(leftPartIndex, rightPartIndex)];
 
                 case var _ when sum < target:
                     left++;

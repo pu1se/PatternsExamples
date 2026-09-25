@@ -1,18 +1,20 @@
-﻿namespace PatternsExamples.Algorithms.MergeSort;
+﻿namespace PatternsExamples.Algorithms.Sorting.MergeSort;
 
 //main idea: очередь атомарных очередей, на каждом шаге сливаем две головные и результат кладём в хвост
 // code quality 8
 //hint: на каждое слияние аллоцируется новая Queue — на массиве с индексами слияние шло бы без копий
 // time  O(n log n)
 // mem O(n)
-internal class MergeSort2MainProgram : IMainProgram
+internal class MergeSort3MainProgram : IMainProgram
 {
     public void RunCode()
     {
         var sort = new Solution();
 
-        int[] inputArray = [10, 9, 1, 1, 1, 2, 4, 3, 1];
+        int[] inputArray = [10, 9, 1, 2, 4, 3, 1];
         var outputArray = sort.SortArray(inputArray);
+
+        Console.WriteLine(outputArray);
     }
 }
 
@@ -26,13 +28,13 @@ file class Solution
 
     int[] ReduceTree(Queue<Queue<int>> arrQueue)
     {
-        while (arrQueue.Count > 1)
-        {
-            var mergedArray = MergeTwoSortedArrays(arrQueue.Dequeue(), arrQueue.Dequeue());
-            arrQueue.Enqueue(mergedArray);
-        }
+        if (arrQueue.Count == 1)
+            return arrQueue.Dequeue().ToArray();
 
-        return arrQueue.Dequeue().ToArray();
+        var mergedArray = MergeTwoSortedArrays(arrQueue.Dequeue(), arrQueue.Dequeue());
+        arrQueue.Enqueue(mergedArray);
+
+        return ReduceTree(arrQueue);
     }
 
     Queue<int> MergeTwoSortedArrays(Queue<int> arrQueue1, Queue<int> arrQueue2)

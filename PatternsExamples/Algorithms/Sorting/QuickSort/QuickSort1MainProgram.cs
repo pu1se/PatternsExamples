@@ -1,10 +1,6 @@
 ﻿namespace PatternsExamples.Algorithms.QuickSort;
 
-//main idea: схема Хоара — выбираем опорное значение, разносим меньшие влево и большие вправо, рекурсивно сортируем половины
-// code quality 3
-//hint: не сортирует. В Partition SwapElements(arr, left, right) меняет границы вместо leftIndex/rightIndex, и возвращается pivotIndex вместо точки разбиения
 // time  O(n log n) в среднем, O(n^2) в худшем
-// mem O(log n)
 internal class QuickSort1MainProgram : IMainProgram
 {
     public void RunCode()
@@ -62,7 +58,7 @@ file class Solution
             if (leftIndex >= rightIndex)
                 break;
 
-            SwapElements(arr, left, right);
+            SwapElements(arr, leftIndex, rightIndex);
         }
 
         return pivotIndex;
@@ -76,7 +72,7 @@ file class Solution
     // try to use Min Max functions to make code more compact
     int GetMiddleIndex(int[] arr, int left, int right)
     {
-        return left + (right - left) / 2;
+        return left;//left + (right - left) / 2;
         /*var middleIndex = left + (right - left) / 2;
         var middleValue = arr[middleIndex];
         var pivotIndex = left;

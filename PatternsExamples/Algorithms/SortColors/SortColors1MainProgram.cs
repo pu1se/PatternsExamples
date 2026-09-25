@@ -29,7 +29,7 @@ internal class SortColors1MainProgram : IMainProgram
 {
     public void RunCode()
     {
-        int[] nums = [2, 0, 2, 1, 1, 0];
+        int[] nums = [1, 0, 2, 2, 1, 0, 2, 1, 1, 0];
 
         var solution = new Solution();
         solution.SortColors(nums);
@@ -42,6 +42,25 @@ file class Solution
 {
     public void SortColors(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums == null)
+            return;
+
+        var left = 0;
+        var right = nums.Length - 1;
+
+        while (left < right)
+        {
+            if (nums[left] > nums[right])
+            {
+                (nums[left], nums[right]) = (nums[right], nums[left]);
+            }
+
+
+            if (nums[left] == 0)
+                left++;
+
+            if (nums[right] == 1)
+                right--;
+        }
     }
 }

@@ -1,4 +1,4 @@
-using PatternsExamples.Algorithms.SortColors;
+using PatternsExamples.Algorithms.MergeSortedArray;
 
-var mainProgram = new SortTwoColors4MainProgram();
+var mainProgram = new MergeSortedArray1();
 mainProgram.RunCode();

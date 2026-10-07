@@ -1,28 +1,30 @@
-﻿namespace PatternsExamples.Algorithms.QuickSort;
+﻿namespace PatternsExamples.Algorithms.MergeSortedArray;
 
-// time  O(n log n) в среднем, O(n^2) в худшем
-
-internal class QuickSort5MainProgram : IMainProgram
+internal class MergeSortedArray1 : IMainProgram
 {
     public void RunCode()
     {
-        var sort = new Solution();
+        var solution = new Solution();
+        int[] nums = [10, 20, 20, 40, 0, 0];
+        solution.Merge(nums, 4, [1, 2], 2);
 
-        int[] inputArray = [4, 5, 6, 1, 2, 3, 7, 0];
-        var outputArray = sort.SortArray(inputArray);
-
-        Console.WriteLine(outputArray.Length);
+        Console.WriteLine(string.Join(", ", nums));
     }
 }
 
-file class Solution
+file record Solution
 {
-    public int[] SortArray(int[] arr)
+    public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
-        if (arr is { Length: > 1 })
-            QuickSort(arr, 0, arr.Length - 1);
+        var i_1 = 0;
+        var i_2 = 0;
 
-        return arr;
+        for (var i = 0; i < n; i++)
+        {
+            nums1[m + i] = nums2[i];
+        }
+
+        QuickSort(nums1, 0, nums1.Length - 1);
     }
 
     void QuickSort(int[] arr, int left_i, int right_i)

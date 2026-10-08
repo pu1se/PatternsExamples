@@ -1,4 +1,4 @@
-using PatternsExamples.Algorithms.MergeSortedArray;
+using PatternsExamples.Algorithms.ConcatenationOfArray;
 
-var mainProgram = new MergeSortedArray1();
+var mainProgram = new ConcatenationOfArray1();
 mainProgram.RunCode();

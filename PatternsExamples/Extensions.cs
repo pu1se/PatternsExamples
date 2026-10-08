@@ -4,7 +4,7 @@ namespace PatternsExamples
 {
     public static class Extensions
     {
-        public static T ToObject<T>(this string json) where T: class
+        public static T ToObject<T>(this string json) where T : class
         {
             return JsonConvert.DeserializeObject<T>(json, new JsonSerializerSettings
             {
@@ -15,7 +15,7 @@ namespace PatternsExamples
                 DefaultValueHandling = DefaultValueHandling.Ignore,
                 MissingMemberHandling = MissingMemberHandling.Ignore,
                 PreserveReferencesHandling = PreserveReferencesHandling.None,
-                
+
 
             });
         }
@@ -25,7 +25,7 @@ namespace PatternsExamples
             return JsonConvert.SerializeObject(obj, Formatting.Indented);
         }
 
-        public static string Join(this IEnumerable<string> list, string delimiter)
+        public static string Join<T>(this IEnumerable<T> list, string delimiter)
         {
             return string.Join(delimiter, list);
         }

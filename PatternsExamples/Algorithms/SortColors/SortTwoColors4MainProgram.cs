@@ -22,14 +22,14 @@ file class Solution
             return;
 
 
-        int j = 0;
+        int boundary_i = 0;
 
         for (var i = 0; i < nums.Length; i++)
         {
             if (nums[i] == 0)
             {
-                (nums[i], nums[j]) = (nums[j], nums[i]);
-                j++;
+                (nums[i], nums[boundary_i]) = (nums[boundary_i], nums[i]);
+                boundary_i++;
             }
         }
     }

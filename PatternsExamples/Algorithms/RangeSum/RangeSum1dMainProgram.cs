@@ -1,11 +1,8 @@
 ﻿namespace PatternsExamples.Algorithms.RangeSum;
 
-// чтобы получить range sum нужно от суммы отнять сумму невходящую в range
-//main idea: префиксные суммы, сумма на отрезке = prefix[right] - prefix[left-1]
-// code quality 2
-//hint: падает — prefixSums объявлен пустым массивом и никогда не выделяется под nums.Length
-// time  O(n) построение, O(1) запрос
-// mem O(n)
+// calculate approximately and discard the extra.
+// precalculate sum of all elements to dict key => index val => sum to index
+// range is sum right - sum left
 internal class RangeSum1dMainProgram : IMainProgram
 {
     public void RunCode()

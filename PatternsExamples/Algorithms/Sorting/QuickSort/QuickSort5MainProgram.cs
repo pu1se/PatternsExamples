@@ -31,15 +31,16 @@ file class Solution
             return;
 
         var pivot = arr[right_i];
-        var pivot_i = Partition(arr, pivot, left_i, right_i);
+        var pivot_i = Partition(pivot, arr, left_i, right_i);
 
         QuickSort(arr, left_i, pivot_i - 1);
         QuickSort(arr, pivot_i + 1, right_i);
     }
 
-    int Partition(int[] arr, int pivot, int left_i, int right_i)
+    int Partition(int pivot, int[] arr, int left_i, int right_i)
     {
         var boundary_i = left_i;
+
         for (var search_i = left_i; search_i < right_i; search_i++)
         {
             if (arr[search_i] < pivot)

@@ -1,15 +1,7 @@
 ﻿namespace PatternsExamples.Algorithms.RangeSum;
 
-/*
- нужно отнять от суммы матрицы от 0 0 до левого карая
- лишние матрицы сторочную и два столбца, а потом
- компенсировать их пересечение
- */
-//main idea: префиксные суммы по матрице — от суммы до правого нижнего угла вычитаем строку и столбец, потом компенсируем их пересечение
-// code quality 0
-//hint: не реализовано, есть только разбор
-// time  O(n*m) построение, O(1) запрос — цель
-// mem O(n*m) — цель
+// main idea: calculate approximately and discard the extra
+// details: calculate sum for matrix and discard sum of left and sum of top matrix.
 internal class RangeSum2dMainProgram : IMainProgram
 {
     public void RunCode()

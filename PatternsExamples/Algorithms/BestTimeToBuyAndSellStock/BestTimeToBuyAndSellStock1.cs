@@ -19,11 +19,13 @@ public class Solution
         if (prices is { Length: < 1 })
             return 0;
 
+        var priceDelta = 0;
         var profit = 0;
         for (var i = 0; i < prices.Length - 1; i++)
         {
-            if (prices[i + 1] > prices[i])
-                profit += prices[i + 1] - prices[i];
+            priceDelta = prices[i + 1] - prices[i];
+            if (0 < priceDelta)
+                profit += priceDelta;
         }
 
         return profit;
